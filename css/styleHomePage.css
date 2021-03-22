@@ -1,37 +1,46 @@
-   
 /* -------------------------------------------- */
+
+
 /* ------------------reusable components------------------ */
+
+
 /* ------------------------------------------------ */
+
+
 /* -------------------------------------------- */
+
 .btn {
     text-decoration: none;
-    color:white;
-    background-color:#e67e22;
-    padding:10px 30px;
+    color: white;
+    background-color: #e67e22;
+    padding: 10px 30px;
     border-radius: 24px;
-    margin:0 5px;
-    width:190px;
+    margin: 0 5px;
+    width: 190px;
     /* các dòng hiển thị trên cùng một dòng và không chỉnh đc width-height */
     /* display:inline; */
     /* inline block thì ngược lại */
-    display:inline-block;
+    display: inline-block;
     text-align: center;
-    transition: all .5s;    
+    transition: all .5s;
 }
 
 .btn:hover,
-.btn:active{
-    background-color:red
+.btn:active {
+    background-color: red
 }
+
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
 }
+
 .row {
     width: 1140px;
     margin: 0 auto;
 }
+
 h1 {
     text-transform: uppercase;
     font-size: 300%;
@@ -45,23 +54,20 @@ h1 {
     margin-bottom: 50px;
 }
 
-h2{
-    color: #e67e22;
+h2 {
+    color: #1e4258;
     font-size: 180%;
     font-weight: 700;
     text-align: center;
     margin: 0 auto;
     margin-top: 5px;
-  }
-  
-
+}
 
 
 /* ------------------HEADER------------------ */
 
 
 /* ------------------------------------------------ */
-
 
 * {
     padding: 0px;
@@ -79,45 +85,46 @@ html {
 }
 
 header {
-    background-image: linear-gradient(45deg,rgba(236 ,171 ,83,0.7)55% ,rgba(45,95,93,0.85)), url("../img/interface/anhnen2.jpg");
+    background-image: linear-gradient(45deg, rgba(236, 171, 83, 0.7)55%, rgba(45, 95, 93, 0.85)), url("../img/interface/anhnen2.jpg");
     background-size: cover;
     background-position: center;
+    width: 100%;
     height: 100vh;
     /* view height */
     background-attachment: fixed;
 }
 
 .logo {
-    width: 350px;
+    width: 200px;
     float: left;
-    margin-left: 70px;
-    margin-top:-50px;
+    margin-left: 50px;
+    margin-top: -5px;
 }
 
 .main-nav {
     float: right;
-    margin-right:50px;
-    margin-top: 55px;
+    margin-right: 10px;
+    margin-top: 40px;
+    list-style: none;
+}
 
-    list-style:none;
+.main-nav li {
+    margin-right: 5px;
+    float: left;
 }
-.main-nav li{
-    margin-right: 40px;
-    float:left;
-}
+
 .main-nav li a:hover,
-.main-nav li a:active{
-    border-bottom:2px solid red;
+.main-nav li a:active {
+    border-bottom: 2px solid red;
 }
-.main-nav li a{
+
+.main-nav li a {
     text-decoration: none;
-    color:white;
-    font-size: 110%;
+    color: white;
+    font-size: 90%;
     font-weight: 700;
     transition: border-bottom 0.5s;
 }
-
-
 
 .heading-main-box {
     position: absolute;
@@ -127,47 +134,52 @@ header {
     transform: translate(-45%, -55%);
     width: 1140px;
 }
+
+
 /* ------sticky----- */
 
-.sticky{
-    background-color: rgba(255,165,79,.9);  
-    position:fixed;
-    z-index:900;
+.sticky {
+    background-color: rgba(255, 165, 79, .9);
+    position: fixed;
+    z-index: 900;
     top: 0;
     left: 0;
     width: 100%;
-    height:70px;
+    height: 70px;
 }
-.sticky .logo{
+
+.sticky .logo {
     width: 200px;
-    margin-top: -40px;
+    margin-top: -30px;
 }
-.sticky .main-nav{
+
+.sticky .main-nav {
     margin-top: 10px;
 }
 
 
-
-
 /* ---------------- about section -----------------------*/
+
+
 /* ------------------------------------------------------*/
-h1, h2{
+
+h1,
+h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
-  }
-  
+}
 
-  h2:after{
+h2:after {
     content: " ";
     display: block;
     width: 150px;
     height: 3px;
-    background-color: rgba(230, 126, 34,0.5);
+    background-color: rgba(230, 126, 34, 0.5);
     margin: 0 auto;
     margin-top: 5px;
-  }
-  
-  .p-long{
+}
+
+.p-long {
     text-align: center;
     color: #265077;
     font-size: 22px;
@@ -176,79 +188,92 @@ h1, h2{
     width: 70%;
     margin-left: 15%;
     line-height: 140%;
-  }
-  
-section{
+}
+
+section {
     padding: 50px;
-  }
+}
 
 
 /* ---------------------- */
+
+
 /* -------------About us----------- */
 
-.about-picture{
+.about-picture {
     position: relative;
 }
-.about-picture img{
-    width:100%;
+
+.about-picture img {
+    width: 100%;
     border-radius: 24px;
-    box-shadow:0px 0px 0px 0px #265077;
+    box-shadow: 0px 0px 0px 0px #265077;
     transition: all .5s;
     /* tạo bóng cho hình ảnh */
     /* filter:brightness(70%) blur(2px); */
-
 }
-.picture-title{
-    position:absolute;
-    top:50%;
-    left:50%;
-    color:white;
-    transform:translate(-65%,-100%);
-    opacity:0;
+
+.picture-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+    transform: translate(-65%, -100%);
+    opacity: 0;
     transition: all .5s;
 }
+
 .about-picture:hover .picture-title,
-.about-picture:active .picture-title{
-    transform:translate(-65%,100%);
-    opacity:0.5;
+.about-picture:active .picture-title {
+    transform: translate(-65%, 100%);
+    opacity: 0.5;
 }
+
 .about-picture:hover img,
-.about-picture:active img{
-    filter:brightness(90%) blur(2px); 
+.about-picture:active img {
+    filter: brightness(90%) blur(2px);
 }
 
 
 /* icoin card */
-.icon-card{
+
+.icon-card {
     list-style: none;
 }
+
 .icon-card li {
     text-decoration: none;
 }
 
+
 /* ------------------------------- */
+
+
 /* ---------TESTIMONIALS SECTION ---------- */
+
+
 /* ------------------------------------------ */
-.customer-section{
-    background-image:linear-gradient(50deg,rgba(0,255,255, 0.8) 10%,rgba(255,255,0,0.5)), url('../img/interface/backgroundd.jpg');
+
+.customer-section {
+    background-image: linear-gradient(50deg, rgba(0, 255, 255, 0.8) 10%, rgba(255, 255, 0, 0.5)), url('../img/interface/backgroundd.jpg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
- 
-.customer-section h2{
+
+.customer-section h2 {
     margin-bottom: 70px;
 }
- 
-blockquote{
+
+blockquote {
     width: 95%;
     position: relative;
     font-style: italic;
     line-height: 140%;
     color: black;
 }
- 
-blockquote:before{
+
+blockquote:before {
     content: '\201C';
     display: block;
     font-size: 400%;
@@ -256,15 +281,15 @@ blockquote:before{
     top: -10px;
     left: -10px;
 }
- 
-cite{
+
+cite {
     display: block;
     color: #6A5ACD;
     font-size: 110%;
     margin-top: 25px;
 }
- 
-cite img{
+
+cite img {
     height: 50px;
     border-radius: 50%;
     border: 2px solid #265077;
@@ -274,6 +299,7 @@ cite img{
 
 
 /* -----------------footer----------- */
+
 .footerHomePage {
     background-color: rgb(247, 247, 247);
     color: black;
@@ -281,82 +307,101 @@ cite img{
 }
 
 #foot .navbar-light .navbar-nav .nav-link:focus,
-    #foot .navbar-light .navbar-nav .nav-link:hover {
-        color: #ef4211;
-    }
-    #foot nav{
-        padding: 15px 0px;
-    }
-    #foot .navbar-light .navbar-nav .nav-link {
-        color: #5a5a5a;
-        font-size: 20px;
-    }
-    #foot {
-        border-bottom: 1px solid #ddd;
-        background-color:white;
-        float: left;
-        width: 100%;
-    }
-    #foot ul.navbar-nav {
-        position: absolute;
-        right: 0;
-    }
-    #foot li.nav-item {
-        margin: 0px 10px;
-    }
-    #foot .navbar-light .navbar-nav .active>.nav-link, #foot .navbar-light .navbar-nav .nav-link.active, #foot .navbar-light .navbar-nav .nav-link.show, #foot .navbar-light .navbar-nav .show>.nav-link {
-        color: #ef4211;
-    }
-    #foot .dropdown-menu.show {
-        border: none;
-    }
-    .topbar {
-        background-color:black;
-        color: #fff;
-        padding: 4px 0px;
-    }
-    .topbar ul{
-        margin: 0px;
-        padding: 0px;
-      }
-    .topbar ul li {
-        float: left;
-        list-style: none;
-        margin: 3px 7px;
-        font-size: 15px;
-      }
-    .topbar ul li a{
-        color: #fff;
-        
-    }
-    .topbar ul li i {
-        font-size: 18px;
-        margin-right: 3px;
-    }
-    .topbar ul li.followus-label {
-        font-weight: bold;
-    }
-    #foot .social-icon {
-        float: right;
-    }
-      /*=============Responsive css==================*/
-      @media (max-width: 991px){
+#foot .navbar-light .navbar-nav .nav-link:hover {
+    color: #ef4211;
+}
+
+#foot nav {
+    padding: 15px 0px;
+}
+
+#foot .navbar-light .navbar-nav .nav-link {
+    color: #5a5a5a;
+    font-size: 20px;
+}
+
+#foot {
+    border-bottom: 1px solid #ddd;
+    background-color: white;
+    float: left;
+    width: 100%;
+}
+
+#foot ul.navbar-nav {
+    position: absolute;
+    right: 0;
+}
+
+#foot li.nav-item {
+    margin: 0px 10px;
+}
+
+#foot .navbar-light .navbar-nav .active>.nav-link,
+#foot .navbar-light .navbar-nav .nav-link.active,
+#foot .navbar-light .navbar-nav .nav-link.show,
+#foot .navbar-light .navbar-nav .show>.nav-link {
+    color: #ef4211;
+}
+
+#foot .dropdown-menu.show {
+    border: none;
+}
+
+.topbar {
+    background-color: black;
+    color: #fff;
+    padding: 4px 0px;
+}
+
+.topbar ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.topbar ul li {
+    float: left;
+    list-style: none;
+    margin: 3px 7px;
+    font-size: 15px;
+}
+
+.topbar ul li a {
+    color: #fff;
+}
+
+.topbar ul li i {
+    font-size: 18px;
+    margin-right: 3px;
+}
+
+.topbar ul li.followus-label {
+    font-weight: bold;
+}
+
+#foot .social-icon {
+    float: right;
+}
+
+
+/*=============Responsive css==================*/
+
+@media (max-width: 991px) {
     .topbar ul li {
         margin: 3px 3px;
         font-size: 12px;
     }
-#foot ul.navbar-nav {
-    position: static;
-    width: 100%;
-    border-top: 1px solid #ddd;
-    margin: 15px 0px 0px;
+    #foot ul.navbar-nav {
+        position: static;
+        width: 100%;
+        border-top: 1px solid #ddd;
+        margin: 15px 0px 0px;
+    }
 }
-}
-    
 
 
 /* product show */
-.contentHomePage{
+
+.contentHomePage {
     background-image: url("../imgs/backgorund.jpg");
     width: 100%;
     height: 100%;
@@ -365,23 +410,21 @@ cite img{
     background-size: cover;
 }
 
-
-.treding .nav a{
+.treding .nav a {
     text-decoration: none;
     width: 100%;
     /* background-color: #4CAF50; */
-    color:black;
-
+    color: black;
 }
 
-.treding li a:hover{  
-    background:rgb(230, 208, 191);
+.treding li a:hover {
+    background: rgb(230, 208, 191);
 }
 
-.treding a{
-    width:40vh; 
-    border-radius:24px; 
-    border:1px solid black; 
-    background:rgba(0, 0, 0, 0.2);
-    animation: trendingchay 2s forwards;  
+.treding a {
+    width: 40vh;
+    border-radius: 24px;
+    border: 1px solid black;
+    background: rgba(0, 0, 0, 0.2);
+    animation: trendingchay 2s forwards;
 }

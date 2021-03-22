@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
    
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styleHomePage.css" />
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <!-- link  API -->
@@ -24,11 +24,13 @@
 
     <!-- link bootstrap footer -->
 </head>
-
+<?php
+   require_once('../modal/connect.php')
+?>
 <body>
 <script src="../js/sticky.js"></script>
     <header >
-        <nav >
+        <nav>
             <a href="#"><img class="logo" src="../img/interface/logoquan.png" alt=""></a>
             <ul class="main-nav">
                 <!-- unordered list -->
@@ -39,7 +41,7 @@
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >Product</a>
                     <div class="dropdown-menu">
                         <a href="#" class="dropdown-item" >sea foods</a>
-                        <a href="#" class="dropdown-item" >junggle foods</a>     
+                        <a href="#" class="dropdown-item" >jungle foods</a>     
                     </div>            
                 </div></li>
                 <li><a href="#contact" class="nav-item nav-link">Contact</a></li>
@@ -110,7 +112,27 @@
     <section class="about-section" id="about">
         <div class="row" >
             <h2 >PRODUCT</h2>
-            <div class="contentHomePage" style="max-width:100% ;">
+            <?php
+                // Check connection
+                    if (mysqli_connect_errno()) {
+                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                            exit();
+                        }
+                        $sql="SELECT * FROM users where id='1010'";
+                        $result=mysqli_query($conn,$sql);
+                        $row1 = mysqli_num_rows($result);
+                            if($row1){   
+                                echo "<script>alert('Thực thi thành công');</script>";
+                                    mysqli_data_seek($result,14);  
+                                    // $row=mysqli_fetch_assoc($result);                                           
+                                    $row=mysqli_fetch_row($result);
+                                    printf ("fullname: %s user_name: %s\n", $row[0], $row[1]);
+                                    // Free result set
+                                    mysqli_free_result($result);
+                                }   
+                        mysqli_close($conn);
+            ?>           
+            <!-- <div class="contentHomePage" style="max-width:100% ;">
                 <div class="container ">
                         <div class="h3 mb-5 treding">
                             <ul class="nav nav-tabs" role="tablist">
@@ -124,18 +146,20 @@
                                     <a class="nav-link " href="#room" role="tab" data-toggle="tab"> <span>Books table</span> </a>
                                 </li>
                             </ul>
-                            <!-- Tab panes -->
+                          
                             <br><br>
                             <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane fade in active row" id="new-product">jhsdaashdioas</div>
-                                <div role="tabpanel" class="tab-pane fade row" id="product-discount"></div>
-                                <div role="tabpanel" class="tab-pane fade row" id="room"></div>
+                                <div role="tabpanel" class="tab-pane fade in active row" id="new-product">
+                                
+                                </div>
+                                <div role="tabpanel" class="tab-pane fade row" id="></div>
+                                <div role="tabpanel" class="tab-pane fade row" id=""></div>
                             </div>
                         </div>
                         <script src="../js/product.js"></script>
                         <script src="../js/room.js"></script>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     
@@ -204,7 +228,7 @@
     </div>
 <!-- ----------------------session body------------------ -->
 <section class="customer-section">
-    <h2>Testimonials</h2>
+    <h2>CUSTOMer</h2>
     <div class="row">
         <div class="col span-1-of-3">
             <blockquote>
