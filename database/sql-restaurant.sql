@@ -159,6 +159,32 @@ insert into products values
 
 select *from Products;
 
+
+-- -----------------------------				
+-- table for bills:				
+-- -----------------------------
+CREATE TABLE rooms(
+	id int(11) NOT NULL AUTO_INCREMENT,					
+	name_product varchar(255) COLLATE utf8_unicode_ci NOT NULL,					
+	category_id int(11) NOT NULL,					
+	image varchar(255) COLLATE utf8_unicode_ci NOT NULL,					
+	description text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,					
+	price float NOT NULL,											
+	created_day date NOT NULL,					
+	quantity_person int(11) NOT NULL,					
+	-- keyword varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,					
+	status int(11) DEFAULT NULL,					
+	PRIMARY KEY (id),					
+	FOREIGN KEY (category_id) REFERENCES categories(id)					
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=34;
+INSERT INTO rooms values	(1,'room',4,'../img/img-room/room1.jpg','',100000,'2020-1-21',20,20),
+							(2,'room1',4,'../img/img-room/room2.jpg','',100000,'2020-1-21',20,20),
+                            (3,'room2',4,'../img/img-room/room3.jpg','',100000,'2020-1-21',20,20),
+                            (4,'room3',4,'../img/img-room/room4.jpg','',100000,'2020-1-21',20,20),
+                            (5,'room4',4,'../img/img-room/room5.jpg','',100000,'2020-1-21',20,20),
+                            (6,'room5',4,'../img/img-room/room6.jpg','',100000,'2020-1-21',20,20);
+
+select * from rooms;
 -- -----------------------------				
 -- table for bills:				
 -- -----------------------------	

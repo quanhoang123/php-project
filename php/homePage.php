@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -16,27 +15,25 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
    
+    <!-- link bootstrap thuần -->
     <link rel="stylesheet" type="text/css" href="../css/styleHomePage.css" />
     <link rel="stylesheet" href="../css/user.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <!-- link  API -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
     <!-- link bootstrap footer -->
 </head>
 <?php
-   require_once('../modal/connect.php')
+//    require_once('../modal/connect.php')
 ?>
 <body>
 <script src="../js/sticky.js"></script>
-    <header >
+    <header>
         <nav>
             <a href="#"><img class="logo" src="../img/interface/logoquan.png" alt=""></a>
             <ul class="main-nav">
-                <!-- unordered list -->
-                <li> <a href="#" class="nav-item nav-link active">Home</a></li>
-                <!-- list item -->
-                <li> <a href="#aboutus"  class="nav-item nav-link">About us</a></li>
+                <li> <a href="#" class="nav-item nav-link active">Home</a></li>               
+                <li> <a href="#aboutus"class="nav-item nav-link">About us</a></li>
                 <li><div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" >Product</a>
                     <div class="dropdown-menu">
@@ -65,10 +62,7 @@
                     </div>
                 </li>
             </ul>
-
-
         </nav>
-
         <div class="clearfix"></div>
         <div class="row">
             <div class="heading-main-text">
@@ -80,7 +74,6 @@
             </div>                           
         </div>
     </header>
-
     <section class="about-section" id="about">
         <div class="row">
             <h2 >About Us</h2>
@@ -114,23 +107,23 @@
             <h2 >PRODUCT</h2>
             <?php
                 // Check connection
-                    if (mysqli_connect_errno()) {
-                        echo "Failed to connect to MySQL: " . mysqli_connect_error();
-                            exit();
-                        }
-                        $sql="SELECT * FROM users where id='1010'";
-                        $result=mysqli_query($conn,$sql);
-                        $row1 = mysqli_num_rows($result);
-                            if($row1){   
-                                echo "<script>alert('Thực thi thành công');</script>";
-                                    mysqli_data_seek($result,14);  
-                                    // $row=mysqli_fetch_assoc($result);                                           
-                                    $row=mysqli_fetch_row($result);
-                                    printf ("fullname: %s user_name: %s\n", $row[0], $row[1]);
-                                    // Free result set
-                                    mysqli_free_result($result);
-                                }   
-                        mysqli_close($conn);
+                    // if (mysqli_connect_errno()) {
+                    //     echo "Failed to connect to MySQL: " . mysqli_connect_error();
+                    //         exit();
+                    //     }
+                    //     $sql="SELECT * FROM users where id='1010'";
+                    //     $result=mysqli_query($conn,$sql);
+                    //     $row1 = mysqli_num_rows($result);
+                    //         if($row1){   
+                    //             echo "<script>alert('Thực thi thành công');</script>";
+                    //                 mysqli_data_seek($result,14);  
+                    //                 // $row=mysqli_fetch_assoc($result);                                           
+                    //                 $row=mysqli_fetch_row($result);
+                    //                 printf ("fullname: %s user_name: %s\n", $row[0], $row[1]);
+                    //                 // Free result set
+                    //                 mysqli_free_result($result);
+                    //             }   
+                    //     mysqli_close($conn);
             ?>           
             <!-- <div class="contentHomePage" style="max-width:100% ;">
                 <div class="container ">
