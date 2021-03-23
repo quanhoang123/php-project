@@ -126,7 +126,7 @@ body {
 .main-nav li a {
     text-decoration: none;
     color: white;
-    font-size: 80%;
+    font-size: 100%;
     font-weight: 700;
     transition: border-bottom 0.5s;
 }
@@ -196,6 +196,7 @@ h2:after {
 }
 
 section {
+    width: 1000px;
     padding: 50px;
 }
 
@@ -408,7 +409,7 @@ cite img {
 /* product show */
 
 .contentHomePage {
-    background-image: url("../imgs/backgorund.jpg");
+    background-image: url("../img/interface/backgroundd.jpg");
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
@@ -428,9 +429,9 @@ cite img {
 }
 
 .treding a {
-    width: 40vh;
-    border-radius: 24px;
-    border: 1px solid black;
-    background: rgba(0, 0, 0, 0.2);
+    /* width: 40vh; */
+    /* border-radius: 24px; */
+    /* border: 1px solid black; */
+    /* background: rgba(0, 0, 0, 0.2); */
     animation: trendingchay 2s forwards;
 }

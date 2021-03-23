@@ -3,6 +3,13 @@ create database RESTAURANT_PROJECT;
 use RESTAURANT_PROJECT;
 
 
+CREATE TABLE IF NOT EXISTS images (
+id int(11) NOT NULL AUTO_INCREMENT,
+image varchar(100) NOT NULL,
+PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+select *from images;
 -- -----------------------------				
 -- table for admin:				
 -- -----------------------------				
@@ -131,7 +138,7 @@ insert into Suppliers value(500,'ABCD','33-HungVuong-HaNoi',012345,'abcd@gmail.c
 -- table for products:						
 -- -----------------------------						
 CREATE TABLE products (						
-	id int(11) NOT NULL AUTO_INCREMENT,					
+	id_product int NOT NULL AUTO_INCREMENT,					
 	name_product varchar(255) COLLATE utf8_unicode_ci NOT NULL,					
 	category_id int(11) NOT NULL,					
 	image varchar(255) COLLATE utf8_unicode_ci NOT NULL,					
@@ -141,17 +148,17 @@ CREATE TABLE products (
 	quantity int(11) NOT NULL,					
 	-- keyword varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,					
 	status int(11) DEFAULT NULL,					
-	PRIMARY KEY (id),					
+	PRIMARY KEY (id_product),					
 	FOREIGN KEY (category_id) REFERENCES categories(id)					
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=34;						
 
 insert into products values 
 (1010,'Ba Ba',1,'../img/img-product/baba.jpg','',100000,'2020-1-21',20,1),
-(1011,'Ga Luoc',1,'..img/img-product/galuoc.png','',150000,'2020-03-05',23,2),
-(1012,'Cua Hoang De',1,'..img/img-product/cuahoangde.jpg','',150000,'2020-03-05',23,2),
-(1013,'Ca Mú Hấp',1,'..img/img-product/camuhap.jpg','',700000,'2020-05-11',20,4),
-(1014,'Cá',2,'../img/img-product/car.png','',100000,'2020-05-12',20,4),
-(1015,'Ga Nuong',1,'../img/img-product/ganuong.jpg','',500000,'2020-05-14',40,3);
+(1011,'Ga Luoc',1,'..img/img-product/galuoc.png','',150000,'2020-03-05',23,1),
+(1012,'Cua Hoang De',1,'..img/img-product/cuahoangde.jpg','',150000,'2020-03-05',23,1),
+(1013,'Ca Mú Hấp',1,'..img/img-product/camuhap.jpg','',700000,'2020-05-11',20,1),
+(1014,'Cá',2,'../img/img-product/car.png','',100000,'2020-05-12',20,1),
+(1015,'Ga Nuong',1,'../img/img-product/ganuong.jpg','',500000,'2020-05-14',40,1);
 -- (1016,'TV Sony SX max',14000000,1,'Sản phâm ưu dùng nhất thi trường siêu bền','2020-05-17',2),
 -- (1017,'Sofa',14000000,1,'Ngồi êm hơn cùng sofa','2020-05-19',1),
 -- (1018,'May tinh ASUS',12000000,1,'Thoái mái xem phim lướt fb cùng bạn tình','2020-03-15',4),
